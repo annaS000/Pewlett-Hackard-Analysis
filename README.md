@@ -24,27 +24,41 @@ Once we have determined the relationships between our files we were able to crea
     ##### **Retiring Titles**
     ![retiring_titles](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/retiring_titles.png?raw=true)
     > After collecting all employees able to retire along with their titles we were able to create a table that shows how many employees may retire by title. Additionally, using 
-    `SELECT SUM(r.count)` on retiring_titles we can see that the overall total of potential retiring employees is **90,398**. That is quite the hit for the company.
+    `SUM()` on retiring_titles we can see that the overall total of potential retiring employees is **90,398**. That is quite the hit for the company.
 
 * To get a better picture of how big of a loss this would actually be we can create a chart to show how many employees there are per title currently.
-    ![all](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/all_titles.png?raw=true)
-    > This table shows us the overall total amount of employees by title. Pewlett Hackard is a large company with **240,124** current employees but, the retiring employees take up almost 38% percent of those positions.
+    ##### **Employee Counts**
+    <img src="https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/all_titles.png?raw=true" width="250" height="200" >  <img src="https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/title_diff.png?raw=true" width="250" height="200" >
+
+    > The table on the left shows us the overall total amount of employees by title. Pewlett Hackard is a large company with **240,124** current employees but, the retiring employees take up almost 38% percent of those positions. The table on the right shows us the difference if all employees that are able to retire were to retire at the same time. This would leave the company with **149,726** employees which would be a huge drop all at once.
 
 ### **Deliverable 2**
 * Next, we had to collect information on how many employees are eligible to participate in a mentorship program.
-
+    ##### **Mentorship Eligibilty**
     ![mentors](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/mentorship_eligibilty.png?raw=true)
-    > Here is a screenshot of the table for eligible mentors for the company. 
-
-    ![mentor count](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/mentortitles.png?raw=true)
+    > Here is a screenshot of the table of all names and titles of the eligible mentors for the company. Using the `COUNT()` function, we found that there are only **1,549** employees that would be able to mentor new employees.   
 
 * After finding our eligible mentors, we can see how many there are for each title.
-    >We can see that there not many employees for each title that will be available for the mentorship program. We can even see there are no employees available for the Manager positions.
+    ##### **Mentor Count**
+    ![mentor count](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/mentortitles.png?raw=true)
+    > We can see that there not many employees for each title that will the availability for the mentorship program according to the current criteria. Furthermore, we can even see there are no employees able to mentor for the Manager positions.
+
+---
 
 ## **Summary** 
 
+All exported cvs files from the analysis can be found in the [Data](https://github.com/annaS000/Pewlett-Hackard-Analysis/tree/main/Data) folder. 
+
 * How many roles will need to be filled as the "silver tsunami" begins to make an impact?
-From our results above we found that there are 90,398 employees that could potentially retire from Pewlett Hackard. 
+
+    From our results above, we found that there are **90,398** employees that could potentially retire from Pewlett Hackard. This could be a difficult task if the company were to have to fill all those positions at once.
+
+    ![retire salaries](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/retiring_salaries.png?raw=true)
+    > I was interested in the salaries of these positions so I added a salary column to the unique titles table. I then used this table to make the chart below that shows the average salaries for the retiring employees by their position title.
+
+    ![avg salaries](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/avg_salaries.png?raw=true)
+    > Perhaps salaries would have an effect on whether or not an employee will retire. It also might be valuable for the company to look into the salaries of the employees that may leave to see how much money will be available for new hires.
 
 * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
-There are only **1,549** employees that are eligible for the mentorship program.
+
+    Our results showed there are only **1,549** employees that are eligible for the mentorship program. 

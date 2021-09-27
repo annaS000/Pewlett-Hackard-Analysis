@@ -97,3 +97,25 @@ INTO avg_salaries
 FROM retiring_salaries as u
 GROUP BY u.title
 ORDER BY AVG(u.salary) DESC;
+
+--All female employees
+SELECT DISTINCT ON (e.emp_no) e.emp_no, 
+       t.title
+INTO emp_female
+FROM employees as e
+INNER JOIN titles as t
+ON (e.emp_no = t.emp_no)
+WHERE (t.to_date = '9999-01-01')
+AND (e.gender = 'F')
+ORDER BY e.emp_no, t.to_date DESC;
+
+--All male employees
+SELECT DISTINCT ON (e.emp_no) e.emp_no, 
+       t.title
+INTO emp_male
+FROM employees as e
+INNER JOIN titles as t
+ON (e.emp_no = t.emp_no)
+WHERE (t.to_date = '9999-01-01')
+AND (e.gender = 'M')
+ORDER BY e.emp_no, t.to_date DESC;
