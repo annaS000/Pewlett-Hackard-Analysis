@@ -79,3 +79,21 @@ SELECT COUNT(m.emp_no), m.title
 FROM mentorship_eligibilty as m
 GROUP BY m.title
 ORDER BY COUNT (m.emp_no) DESC;
+
+--Salaries for unique titles
+SELECT  u.emp_no,
+	u.first_name, 
+    u.last_name,
+	u.title,
+	s.salary
+FROM unique_titles as u
+INNER JOIN salaries as s
+ON (u.emp_no = s.emp_no)
+ORDER BY u.emp_no, s.to_date DESC;
+
+--Average salary for each unique title
+SELECT ROUND(AVG(u.salary),0), u.title
+INTO avg_salaries
+FROM retiring_salaries as u
+GROUP BY u.title
+ORDER BY AVG(u.salary) DESC;
