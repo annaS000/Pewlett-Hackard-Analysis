@@ -50,3 +50,17 @@ SELECT * FROM mentorship_eligibilty;
 SELECT * FROM retirement_titles;
 SELECT * FROM unique_titles;
 SELECT * FROM retiring_titles;
+
+--Create table for all current employees
+SELECT DISTINCT ON (t.emp_no) t.emp_no, t.title, t.to_date
+INTO unique_all
+FROM titles as t
+WHERE (t.to_date = '9999-01-01')
+ORDER BY t.emp_no, t.to_date DESC;
+
+--Create table for current employee count per title
+SELECT COUNT(u.emp_no), u.title
+INTO all_titles
+FROM unique_all as u
+GROUP BY u.title
+ORDER BY COUNT (u.emp_no) DESC;
