@@ -34,16 +34,17 @@ Once we have determined the relationships between our files we were able to crea
 * Next, we had to collect information on how many employees are eligible to participate in a mentorship program.
 
     ![mentors](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/mentorship_eligibilty.png?raw=true)
-    > Here is a screenshot of the table for eligible mentors for the company. Using the `COUNT()` function here are only **1,549** employees able to mentor new employees.
+    > Here is a screenshot of the table for eligible mentors for the company. 
 
     ![mentor count](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/mentortitles.png?raw=true)
 
 * After finding our eligible mentors, we can see how many there are for each title.
-    >We can see that there not many employees for each title that will be available to mentor. We can even see there are no employees able to mentor for the Manager positions. This is not
+    >We can see that there not many employees for each title that will be available for the mentorship program. We can even see there are no employees available for the Manager positions.
+
 ## **Summary** 
 
-Provide high-level responses to the following questions, then provide two additional queries or tables that may provide more insight into the upcoming "silver tsunami.":
-
 * How many roles will need to be filled as the "silver tsunami" begins to make an impact?
+From our results above we found that there are 90,398 employees that could potentially retire from Pewlett Hackard. 
 
 * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
+There are only **1,549** employees that are eligible for the mentorship program.
