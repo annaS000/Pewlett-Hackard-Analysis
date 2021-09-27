@@ -64,3 +64,18 @@ INTO all_titles
 FROM unique_all as u
 GROUP BY u.title
 ORDER BY COUNT (u.emp_no) DESC;
+
+--Create chart of the difference
+SELECT rt.title, at.count - rt.count as "Difference"
+INTO title_diff
+FROM   all_titles as at
+JOIN   retiring_titles as rt 
+ON at.title = rt.title
+ORDER BY at.count DESC;
+
+--Table of eligible mentors by title
+SELECT COUNT(m.emp_no), m.title
+--INTO mentors_title
+FROM mentorship_eligibilty as m
+GROUP BY m.title
+ORDER BY COUNT (m.emp_no) DESC;
