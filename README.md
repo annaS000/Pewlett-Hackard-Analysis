@@ -28,9 +28,9 @@ Once we have determined the relationships between our files we were able to crea
 
 * To get a better picture of how big of a loss this would actually be we can create a chart to show how many employees there are per title currently.
     ##### **Employee Counts**
-    <img src="https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/all_titles.png?raw=true" width="250" height="200" >  <img src="https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/title_diff.png?raw=true" width="250" height="200" >
+    ![](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/all_titles.png?raw=true)
 
-    > The table on the left shows us the overall total amount of employees by title. Pewlett Hackard is a large company with **240,124** current employees but, the retiring employees take up almost 38% percent of those positions. The table on the right shows us the difference if all employees that are able to retire were to retire at the same time. This would leave the company with **149,726** employees which would be a huge drop all at once.
+    > The table on the left shows us the overall total amount of employees by title. Pewlett Hackard is a large company with **240,124** current employees but, the retiring employees take up almost 38% percent of those positions. 
 
 ### **Deliverable 2**
 * Next, we had to collect information on how many employees are eligible to participate in a mentorship program.
@@ -61,4 +61,12 @@ All exported cvs files from the analysis can be found in the [Data](https://gith
 
 * Are there enough qualified, retirement-ready employees in the departments to mentor the next generation of Pewlett Hackard employees?
 
-    Our results showed there are only **1,549** employees that are eligible for the mentorship program. 
+    Our results showed there are only **1,549** employees that are eligible for the mentorship program. Compared to the amount of employees that may leave the company in the upcoming years, there is a severe imbalance in how many mentors are needed to help the replacement process. With this knowledge, the company may have to reconsider their criteria for this program. Being more lenient with which employees are allowed mentor others will help even out the mentor to new hire ratio.
+
+    ![new mentors](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/new_mentors.png?raw=true)
+
+    >Here is a new chart of eligible mentors where the birthdate was extended to January 1, 1960 and December 31, 1965.
+
+    ![new mentor count](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/ment_count.png?raw=true)
+
+    >This gives the company many more individuals that can mentor new employees when employees start to retire which would alleviate the pressure for company during the hiring process.
