@@ -28,7 +28,7 @@ Once we have determined the relationships between our files we were able to crea
 
 * To get a better picture of how big of a loss this would actually be we can create a chart to show how many employees there are per title currently.
     ##### **Employee Counts**
-    ![](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/all_titles.png?raw=true)
+    ![emp count](https://github.com/annaS000/Pewlett-Hackard-Analysis/blob/main/Data/all_titles.png?raw=true)
 
     > The table on the left shows us the overall total amount of employees by title. Pewlett Hackard is a large company with **240,124** current employees but, the retiring employees take up almost 38% percent of those positions. 
 

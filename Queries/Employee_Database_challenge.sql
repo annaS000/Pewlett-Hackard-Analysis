@@ -119,3 +119,27 @@ ON (e.emp_no = t.emp_no)
 WHERE (t.to_date = '9999-01-01')
 AND (e.gender = 'M')
 ORDER BY e.emp_no, t.to_date DESC;
+
+--New mentorship criteria
+SELECT DISTINCT ON (emp_no) e.emp_no, 
+                            e.first_name, 
+                            e.last_name,
+                            e.birth_date,
+                            d.from_date,
+                            d.to_date,
+                            t.title
+INTO new_mentorship
+FROM employees as e
+    INNER JOIN dept_employee as d
+        ON (e.emp_no = d.emp_no)
+    INNER JOIN titles as t
+        ON (e.emp_no = t.emp_no)
+WHERE (e.birth_date BETWEEN '1960-01-01' AND '1965-12-31')
+AND (d.to_date = '9999-01-01')
+ORDER BY e.emp_no;
+
+SELECT COUNT(m.emp_no), m.title
+INTO new_mentors
+FROM new_mentorship as m
+GROUP BY m.title
+ORDER BY COUNT (m.emp_no) DESC;
